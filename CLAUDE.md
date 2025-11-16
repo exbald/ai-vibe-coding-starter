@@ -2,11 +2,11 @@
 
 ## Project Overview
 
-This is a Next.js 15 boilerplate for building AI-powered applications with authentication, database, and modern UI components.
+This is a Next.js 16 boilerplate for building AI-powered applications with authentication, database, and modern UI components.
 
 ### Tech Stack
 
-- **Framework**: Next.js 15 with App Router, React 19, TypeScript
+- **Framework**: Next.js 16 with App Router, React 19.2, TypeScript
 - **AI Integration**: Vercel AI SDK 5 + OpenRouter (access to 100+ AI models)
 - **Authentication**: BetterAuth with Google OAuth
 - **Database**: PostgreSQL with Drizzle ORM
@@ -133,7 +133,7 @@ The project includes technical documentation in `docs/`:
 2. **NEVER start the dev server yourself**
 
    - If you need dev server output, ask the user to provide it
-   - Don't run `npm run dev` or `pnpm dev`
+   - Don't run `npm run dev`
 
 3. **Use OpenRouter, NOT OpenAI directly**
 
@@ -170,7 +170,7 @@ The project includes technical documentation in `docs/`:
    - Use TypeScript with proper types
 
 8. **API Routes**
-   - Follow Next.js 15 App Router conventions
+   - Follow Next.js 16 App Router conventions
    - Use Route Handlers (route.ts files)
    - Return Response objects
    - Handle errors appropriately
@@ -219,7 +219,14 @@ The project includes technical documentation in `docs/`:
 
 ## Package Manager
 
-This project uses **pnpm** (see `pnpm-lock.yaml`). When running commands:
+This project uses **npm**. All commands should use `npm run [script]`.
 
-- Use `pnpm` instead of `npm` when possible
-- Scripts defined in package.json work with `pnpm run [script]`
+## Custom Claude Code Agents
+
+This project includes specialized agents available via Claude Code:
+
+- **`better-auth-expert`**: Use for authentication-related changes, OAuth setup, session management, and user verification workflows
+- **`ui-developer`**: Use for React component creation, UI improvements, responsive design, and styling consistency
+- **`polar-payments-expert`**: Use for payment integration, subscription setup, and Polar-related functionality
+
+These agents provide specialized expertise and should be used when working on their respective domains to ensure best practices and consistency.
